@@ -7,35 +7,35 @@
 		<link rel="stylesheet" href="./css/index.css" />
 	</head>
 	<body>
-		<main>
-			<img src="./images/main-image.png" alt="Foto do Instagram" />
-			<div>
-				<h1><img src="./images/logo-instagram.png" alt="Instagram" /></h1>
-				<form>
-					<div>
-						<input
+		<main class="main">
+			<img class="main__image" src="./images/main-image.png" alt="Foto do Instagram" />
+			<div class="main__content">
+				<h1 class="main__title"><img id="logo" src="./images/logo-instagram.png" alt="Instagram" /></h1>
+				<form class="form">
+					<div class="form__inputs">
+						<input class="form__login"
 							placetype="text"
 							placeholder="Telefone, nome de usuário ou email"
 							autocomplete="off"
 							aria-label="Telefone, nome de usuário ou email"
 						/>
-						<input type="password" placeholder="Senha" aria-label="Senha" />
+						<input class="form__password" type="password" placeholder="Senha" aria-label="Senha" />
 					</div>
-					<button type="button">Entrar</button>
+					<button class="form__button" type="button">Entrar</button>
 				</form>
-				<div>
-					<img src="" alt="" />
-					<p>ou</p>
-					<img src="" alt="" />
+				<div class="div">
+					<img class="div__image" src="./images/horizontal-divider.svg" alt="" />
+					<p class="div__text">ou</p>
+					<img class="div__image--right" src="./images/horizontal-divider.svg" alt="" />
 				</div>
-                <div>
-                    <a>
-                        <img src="./images/facebook.png" alt="">
-                        <p>Entrar com o Facebook</p>
+                <div class="div--login">
+                    <a class="login">
+                        <img class="login__image" src="./images/facebook.png" alt="">
+                        <p class="login__text">Entrar com o Facebook</p>
                     </a>
-                    <a href="#">Esqueceu a senha?</a>
+                    <a class="login__forgot" href="#">Esqueceu a senha?</a>
                 </div>
-                <p>Não tem uma conta?<a href="#">Cadastre-se</a></p>
+                <p class="register">Não tem uma conta?<a class="register__now" href="#">Cadastre-se</a></p>
 			</div>
 		</main>
         <footer>
@@ -64,5 +64,6 @@
                 </select>
             </div>
         </footer>
+        <script src="./js/index.js"></script>
 	</body>
 </html>
