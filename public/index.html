@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Instagram</title>
+		<link rel="stylesheet" href="./css/index.css" />
+	</head>
+	<body>
+		<main class="main">
+			<img class="main__image" src="./images/main-image.png" alt="Foto do Instagram" />
+			<div class="main__content">
+				<h1 class="main__title"><img id="logo" src="./images/logo-instagram.png" alt="Instagram" /></h1>
+				<form class="form">
+					<div class="form__inputs">
+						<input class="form__login"
+							placetype="text"
+							placeholder="Telefone, nome de usuário ou email"
+							autocomplete="off"
+							aria-label="Telefone, nome de usuário ou email"
+						/>
+						<input class="form__password" type="password" placeholder="Senha" aria-label="Senha" />
+					</div>
+					<button class="form__button" type="button">Entrar</button>
+				</form>
+				<div class="div">
+					<img class="div__image" src="./images/horizontal-divider.svg" alt="" />
+					<p class="div__text">ou</p>
+					<img class="div__image--right" src="./images/horizontal-divider.svg" alt="" />
+				</div>
+                <div class="div--login">
+                    <a class="login">
+                        <img class="login__image" src="./images/facebook.png" alt="">
+                        <p class="login__text">Entrar com o Facebook</p>
+                    </a>
+                    <a class="login__forgot" href="#">Esqueceu a senha?</a>
+                </div>
+                <p class="register">Não tem uma conta?<a class="register__now" href="#">Cadastre-se</a></p>
+			</div>
+		</main>
+        <footer class="footer">
+            <ul class="links">
+                <li class="links__iten">Meta</li>
+                <li class="links__iten">Sobre</li>
+                <li class="links__iten">Blog</li>
+                <li class="links__iten">Carreiras</li>
+                <li class="links__iten">Ajuda</li>
+                <li class="links__iten">API</li>
+                <li class="links__iten">Privacidade</li>
+                <li class="links__iten">Termos</li>
+                <li class="links__iten">Localizações</li>
+                <li class="links__iten">Instagram Lite</li>
+                <li class="links__iten">Meta AI</li>
+                <li class="links__iten">Artigos de Meta AI</li>
+                <li class="links__iten">Threads</li>
+                <li class="links__iten">Upload de contatos e não usuários</li>
+                <li class="links__iten">Meta Verified</li>
+            </ul>
+            <div class="copy">
+                <select class="copy__language" name="language" id="language" aria-label="Idioma">
+                    <option class="language__chose" value="a" selected>Português (Brasil)</option>
+                    <option class="language__chose" value="b">English</option>
+                    <option class="language__chose" value="c">Español</option>
+                </select>
+                <p class="copy__copy">© 2025 Instagram from Meta</p>
+            </div>
+        </footer>
+        <script src="./js/index.js"></script>
+	</body>
 </html>

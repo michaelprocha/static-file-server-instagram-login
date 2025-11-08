@@ -1,0 +1,278 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #000000;
+	color: #ffffff;
+	min-width: 100dvh;
+}
+
+.main {
+	height: calc(576 / 16 * 1rem);
+}
+
+.main__image {
+	display: none;
+}
+
+.main__title {
+	padding: calc(46 / 16 * 1rem) 0;
+}
+
+.main__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+}
+
+.form__inputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+}
+
+.form__login {
+	height: calc(38 / 16 * 1rem);
+	width: calc(270 / 16 * 1rem);
+	padding: 0 calc(8 / 16 * 1rem);
+	background-color: #121212;
+	border: solid 1px #555555;
+	border-radius: 3px;
+}
+
+.form__login::placeholder {
+	color: #a8a8a8;
+	font-size: 12px;
+}
+
+.form__password {
+	height: calc(38 / 16 * 1rem);
+	width: calc(270 / 16 * 1rem);
+	padding: 0 calc(8 / 16 * 1rem);
+	background-color: #121212;
+	border: solid 1px #555555;
+	border-radius: 3px;
+}
+
+.form__password::placeholder {
+	color: #a8a8a8;
+	font-size: 12px;
+}
+
+.form__button {
+	height: calc(32 / 16 * 1rem);
+	width: calc(270 / 16 * 1rem);
+	background-color: #4a5df9;
+	color: #e6e6e6;
+	border: none;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.div {
+	padding: calc(22 / 16 * 1rem) 0 calc(30 / 16 * 1rem) 0;
+	display: flex;
+	gap: 18px;
+}
+
+.div__text {
+	color: #a8a8a8;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.div--login {
+	padding-bottom: 6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.login {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.login__text {
+	color: #0095f6;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.login__forgot {
+	color: #fafafa;
+	text-decoration: none;
+}
+
+.register {
+	color: #fafafa;
+}
+
+.register__now {
+	padding-left: 8px;
+	color: #708dff;
+	text-decoration: none;
+}
+
+.footer {
+	padding: calc(32px + 32px) 0 63px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+}
+
+.links {
+	padding: 0 24px 0 24px;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+}
+
+.links__iten {
+	font-size: 12px;
+	color: #a8a8a8;
+}
+
+.copy {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
+
+.copy__language {
+	background-color: #000000;
+	color: #a8a8a8;
+	font-size: 11.8px;
+}
+
+.copy__copy {
+	color: #a8a8a8;
+	font-size: 11.8px;
+}
+
+@media (min-width: 768px) {
+	.main {
+		min-height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer{
+		min-height: 20%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.main {
+		min-height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 60px;
+	}
+
+	.main__image {
+		display: flex;
+	}
+
+	.footer{
+		min-height: 20%;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #000000;
+		color: #ffffff;
+	}
+
+	#logo {
+		content: url("../images/logo-instagram.png");
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: #ffffff;
+		color: #000000;
+	}
+
+	#logo {
+		content: url("../images/logo-instagram-light.png");
+	}
+
+	.form__login {
+		background-color: #fafafa;
+		border: solid 1px #dbdbdb;
+	}
+
+	.form__login::placeholder {
+		color: #737373;
+	}
+
+	.form__password {
+		background-color: #fafafa;
+		border: solid 1px #dbdbdb;
+	}
+
+	.form__password::placeholder {
+		color: #737373;
+	}
+
+	.form__button {
+		background-color: #7c89fd;
+		color: #e6e6e6;
+		border: none;
+	}
+
+	.login__forgot {
+		color: #000000;
+	}
+
+	.register {
+		color: #000000;
+	}
+
+	.register__now {
+		color: #2f47ff;
+	}
+
+	.div__image {
+		content: url("../images/horizontal-divider-light.svg");
+	}
+
+	.div__image--right {
+		content: url("../images/horizontal-divider-light.svg");
+	}
+
+	.links__iten {
+		color: #747474;
+	}
+
+	.copy__language {
+		background-color: #ffffff;
+		color: #747474;
+	}
+
+	.copy__copy {
+		color: #747474;
+	}
+}
