@@ -7,6 +7,7 @@
 body {
 	background-color: #000000;
 	color: #ffffff;
+	min-width: 100dvh;
 }
 
 .main {
@@ -164,6 +165,37 @@ body {
 .copy__copy {
 	color: #a8a8a8;
 	font-size: 11.8px;
+}
+
+@media (min-width: 768px) {
+	.main {
+		min-height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer{
+		min-height: 20%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.main {
+		min-height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 60px;
+	}
+
+	.main__image {
+		display: flex;
+	}
+
+	.footer{
+		min-height: 20%;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
