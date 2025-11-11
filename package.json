@@ -1,0 +1,21 @@
+{
+  "name": "static-file-server-instagram-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelprocha/static-file-server-instagram-login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelprocha/static-file-server-instagram-login/issues"
+  },
+  "homepage": "https://github.com/michaelprocha/static-file-server-instagram-login#readme"
+}
