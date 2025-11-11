@@ -11,7 +11,6 @@ function reqMethod(method) {
 }
 
 function reqUrl(reqNewUrl) {
-    console.log(reqNewUrl)
     if (reqNewUrl === "/") {
         const finalPath = path.normalize(path.join(initialPath, "/index.html"));
         return finalPath;
