@@ -1,5 +1,5 @@
 import path from "path";
-import { readFile } from '../file/file.js';
+import { fileExists } from '../file/file.js';
 
 const extFile = {
   html: "text/html; charset=utf-8",
@@ -16,13 +16,13 @@ const extFile = {
 };
 
 async function resFile(newUrl) {
-  const data = await readFile(newUrl);
+  const data = await fileExists(newUrl);
   return data;
 }
 
-function resHeader(ext) {
+function resHeader(newUrl) {
   const ext = path.extname(newUrl);
-  return extFile[ext.substrimng(1)];
+  return extFile[ext.substring(1)];
 }
 
 export { resFile, resHeader };

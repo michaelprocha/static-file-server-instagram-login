@@ -1,12 +1,20 @@
-import fs from 'fs';
+import fs from "fs";
 
 async function readFile(newUrl) {
-    try {
-        const data = await fs.promises.readFile(newUrl, 'utf8');
-        return data;
-    } catch (error) {
-        throw error;
-    }
+	try {
+		const data = await fs.promises.readFile(newUrl, "utf8");
+		return data;
+	} catch (error) {
+		throw error;
+	}
 }
 
-export { readFile };
+function fileExists(newUrl) {
+	if (fs.existsSync(newUrl)) {
+		return readFile(newUrl);
+	} else {
+		return '';
+	}
+}
+
+export { readFile, fileExists };

@@ -1,6 +1,6 @@
 import http from "http";
 import { reqMethod, reqUrl } from "./request/req.js";
-import { resSend, resHeader } from "./reposnse/res.js";
+import { resFile, resHeader } from "./reposnse/res.js";
 
 const port = 3000;
 
@@ -12,7 +12,11 @@ const server = http.createServer(async (req, res) => {
 		const data = await resFile(newUrl);
 		const content = resHeader(newUrl);
 		res.setHeader('Content-Type', content);
-		res.end(data)
+		if (data) {
+			res.end(data);
+		}else{
+			res.end();
+		}
 	} else {
 		console.log("metodo não altorizado");
 	}
