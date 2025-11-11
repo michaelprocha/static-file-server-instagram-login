@@ -1,31 +1,22 @@
 import http from "http";
-import { URL } from "url";
-import path from "path";
-import fs from "fs";
-import verifyReq from "./request/verifyReq.js";
+import { reqMethod, reqUrl } from "./request/req.js";
+import { resSend } from "./reposnse/res.js";
 
 const port = 3000;
-const initialPath = path.join(process.cwd(), "/public");
 
-const server = http.createServer((req, res) => {
-	const isGet = verifyReq(req.method);
+const server = http.createServer(async (req, res) => {
+	const isGet = reqMethod(req.method);
 
-	if (req.url === "/") {
-		const finalPath = path.join(initialPath, "/index.html");
-		console.log(finalPath);
-		const reqUrl = new URL(finalPath);
-		console.log(reqUrl.href);
-
-		if (isGet) {
-			console.log("metodo permitido");
-		} else {
-			console.log("metodo não altorizado");
-		}
+	if (isGet) {
+		const newUrl = reqUrl(req.url);
+		const data = await resSend(newUrl);
+		console.log(typeof data);
+		res.end(data)
+		
+	} else {
+		console.log("metodo não altorizado");
 	}
 
-	// const urlOfReq = new URL(req.url);
-	// console.log(urlOfReq.hostname);
-	// console.log(urlOfReq.href);
 });
 
 server.listen(port, () => {
