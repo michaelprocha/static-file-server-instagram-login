@@ -15,10 +15,14 @@ const extFile = {
   txt: "text/plain; charset=utf-8",
 };
 
-async function resSend(newUrl) {
-    const ext = path.extname(newUrl);
-    const data = await readFile(newUrl);
-    return data;
+async function resFile(newUrl) {
+  const data = await readFile(newUrl);
+  return data;
 }
 
-export { resSend };
+function resHeader(ext) {
+  const ext = path.extname(newUrl);
+  return extFile[ext.substrimng(1)];
+}
+
+export { resFile, resHeader };
