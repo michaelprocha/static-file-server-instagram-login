@@ -11,6 +11,7 @@ const server = http.createServer(async (req, res) => {
 		const newUrl = reqUrl(req.url);
 		const data = await resFile(newUrl);
 		const content = resHeader(newUrl);
+		res.statusCode = 200;
 		res.setHeader('Content-Type', content);
 		if (data) {
 			res.end(data);
